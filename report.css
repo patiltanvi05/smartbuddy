@@ -1,0 +1,61 @@
+      /* layout */
+      .reports-wrap { max-width:1100px; margin:20px auto; padding:18px; box-sizing:border-box; }
+      .panel-head { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; }
+      .title { font-weight:600; font-size:20px; color:#111827; }
+
+      /* toggle buttons (curved) */
+      .toggle-group { display:flex; gap:8px; }
+      .toggle-btn {
+        padding:8px 14px;
+        border-radius:999px;
+        border:1px solid #e6eef7;
+        background:#fff;
+        color:#0f172a;
+        font-weight:600;
+        cursor:pointer;
+        box-shadow:0 6px 18px rgba(2,6,23,0.04);
+      }
+      .toggle-btn.active.monthly { background:#10b981; color:#fff; border-color:#10b981; }
+      .toggle-btn.active.weekly { background:#059669; color:#fff; border-color:#059669; }
+
+      .chart-card {
+        background:#fff;
+        border-radius:12px;
+        padding:14px;
+        box-shadow:0 8px 24px rgba(2,6,23,0.04);
+        border:1px solid #eef2f7;
+        display:flex;
+        gap:20px;
+        align-items:flex-start;
+      }
+
+      .chart-area { flex:1 1 520px; min-width:300px; }
+      .legend-area { width:320px; min-width:200px; }
+
+      canvas { width:100% !important; height:320px !important; }
+
+      .legend-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+      .legend-item { display:flex; gap:10px; align-items:center; }
+      .swatch { width:14px; height:14px; border-radius:4px; display:inline-block; box-shadow:0 2px 6px rgba(2,6,23,0.06); }
+
+      .recommendation {
+        margin-top:14px;
+        border-radius:10px;
+        padding:12px 14px;
+        background:linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.98));
+        border:1px solid #eef2f7;
+        box-shadow:0 6px 18px rgba(2,6,23,0.04);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:12px;
+      }
+      .rec-text { font-weight:600; color:#111827; }
+      .rec-detail { color:#6b7280; font-size:14px; }
+
+      /* responsive */
+      @media (max-width:880px) {
+        .chart-card { flex-direction:column; }
+        .legend-area { width:100%; order:2; }
+        canvas { height:260px !important; }
+      }

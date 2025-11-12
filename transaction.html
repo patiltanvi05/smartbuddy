@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction.com</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/transaction.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../css/theme.css">
+    <script src="../javascript/theme.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <img class="site-logo" src="../img/logo .png" alt="Smart Budget Buddy Logo" >
+      </div>
+
+      <div class="header-right">
+        <i class="icon add">+</i>
+        <i class="icon menu">&#9776;</i>
+        <i class="icon settings">&#9881;</i>
+
+        <div class="dropdown" id="dropdownMenu">
+          <a href="./home.html" rel="noopener">Dashboard</a>
+          <a href="./view.html" target="_blank" rel="noopener">View Transactions</a>
+          <a href="./reports.html" target="_blank" rel="noopener">Reports</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="transaction-form-card card" style="max-width:720px;margin:28px auto;padding:20px;">
+        <h2 style="margin:0 0 12px;font-size:18px;color: #303236;">Create transaction</h2>
+
+        <form id="txForm" autocomplete="off" novalidate>
+          <div style="display:flex;gap:12px;margin-bottom:12px;">
+            <div style="flex:1">
+              <label for="txType" style="display:block;font-size:13px;color:#6b7280;margin-bottom:6px;">Type</label>
+              <select id="txType" class="input" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef7;">
+                <option value="expense">Expense</option>
+                <option value="income">Income</option>
+              </select>
+            </div>
+
+            <div style="flex:1">
+              <label for="txAmount" style="display:block;font-size:13px;color:#6b7280;margin-bottom:6px;">Amount</label>
+              <input id="txAmount" type="number" min="0" step="0.01" placeholder="0.00" required
+                     style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef7;">
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;margin-bottom:12px;">
+            <div style="flex:1">
+              <label for="txCategory" style="display:block;font-size:13px;color:#6b7280;margin-bottom:6px;">Category</label>
+              <input id="txCategory" type="text" placeholder="e.g. Groceries" required
+                     style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef7;">
+            </div>
+
+            <div style="flex:1">
+              <label for="txDate" style="display:block;font-size:13px;color:#6b7280;margin-bottom:6px;">Date</label>
+              <input id="txDate" type="date" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef7;">
+            </div>
+          </div>
+
+          <div style="margin-bottom:14px;">
+            <label for="txDesc" style="display:block;font-size:13px;color:#6b7280;margin-bottom:6px;">Description (optional)</label>
+            <textarea id="txDesc" rows="3" placeholder="Notes..." style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef7;"></textarea>
+          </div>
+
+          <div style="display:flex;gap:12px;justify-content:flex-end;">
+            <button type="button" id="cancelBtn" class="toggle-btn" style="background:#fff;border:1px solid #d1d5db;">Cancel</button>
+            <button type="submit" id="createBtn" class="toggle-btn" style="background:#10b981;color:#fff;border:none;">Create</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="../javascript/transaction.js"></script>
+  </body>
+</html>

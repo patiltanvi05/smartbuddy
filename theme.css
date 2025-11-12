@@ -1,0 +1,46 @@
+/* Minimal dark-mode overrides used across pages when <body class="theme-dark"> is present */
+
+body.theme-dark {
+  background: #0b0b0c !important;
+  color: #e6eef3 !important;
+}
+
+/* Make cards darker */
+body.theme-dark .card,
+body.theme-dark .chart-container,
+body.theme-dark .panel,
+body.theme-dark .table-wrap,
+body.theme-dark .status-card {
+  background: #0f1724 !important;
+  border-color: rgba(255,255,255,0.03) !important;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.24) !important;
+  color: #e6eef3 !important;
+}
+
+/* Card values and titles */
+body.theme-dark .card-title { color: #9aa6b2 !important; }
+body.theme-dark .card-value { color: #e6eef3 !important; }
+
+/* Table text */
+body.theme-dark table.transactions thead th,
+body.theme-dark table.transactions tbody td {
+  color: #e6eef3 !important;
+}
+
+/* Inputs */
+body.theme-dark input,
+body.theme-dark select,
+body.theme-dark textarea {
+  background: #0b1116 !important;
+  color: #e6eef3 !important;
+  border-color: #16202a !important;
+}
+
+/* Buttons */
+body.theme-dark .toggle-btn { background:#111827; color:#e6eef3; border-color:#16202a; }
+body.theme-dark .save-btn { box-shadow: 0 12px 30px rgba(16,185,129,0.10); }
+
+/* Header should remain same — do not override .header styles */
+
+/* Small adjustments for legend / status details */
+body.theme-dark .status-card .details { color: #9aa6b2 !important; }

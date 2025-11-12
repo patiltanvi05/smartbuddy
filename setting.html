@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Setting.com</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/setting.css">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+    <script src="../javascript/theme.js"></script>
+  </head>
+  <body>
+  <header class="header">
+    <!-- Logo (Left Side) -->
+    <div class="header-left">
+<img class="site-logo" src="../img/logo .png" alt="Smart Budget Buddy Logo" >
+    </div>
+
+    <!-- Icons (Right Side) -->
+    <div class="header-right">
+      <i class="icon add">+</i>
+      <i class="icon menu">&#9776;</i> <!-- hamburger menu -->
+      <i class="icon settings">&#9881;</i> <!-- settings gear -->
+
+      <!-- Dropdown Menu -->
+      <div class="dropdown" id="dropdownMenu">
+         <a href="./home.html" rel="noopener">Dashboard</a>
+         <a href="./view.html" target="_blank" rel="noopener">View Transactions</a>
+         <a href="./reports.html" target="_blank" rel="noopener">Reports</a>
+      </div>
+    </div>
+  </header>
+
+<main class="settings-wrap">
+  <section class="panel" aria-labelledby="themeHeading">
+    <h3 id="themeHeading">Theme</h3>
+    <div class="toggle-row">
+      <div class="switch" role="tablist" aria-label="Theme toggle">
+        <button id="btnLight" class="toggle-btn" aria-pressed="false">Light</button>
+        <button id="btnDark" class="toggle-btn" aria-pressed="false">Dark</button>
+      </div>
+      <div style="color:var(--muted); font-size:14px;">Header stays unchanged. Theme affects page background, cards and text.</div>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="personalHeading">
+    <h3 id="personalHeading">Personal</h3>
+
+    <form id="personalForm" autocomplete="off">
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="Your name">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="password">Change password</label>
+          <input id="password" type="password" placeholder="New password">
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input id="phone" type="tel" placeholder="+91 99999 99999">
+        </div>
+
+      </div>
+
+      <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+        <button id="saveChanges" class="save-btn" type="submit">Save changes</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<div id="saveToast" role="status" aria-live="polite">Saved!</div>
+
+<footer></footer>
+
+<script src="../javascript/setting.js">
+
+</script>
+  </body>
+</html>

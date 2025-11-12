@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Dashboard.com</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/home.css">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <script src="../javascript/theme.js" defer></script>
+  </head>
+  <body>
+  <header class="header">
+    <!-- Logo (Left Side) -->
+    <div class="header-left">
+       <img class="site-logo" src="../img/logo .png" alt="Smart Budget Buddy Logo" >
+    </div>
+
+    <!-- Icons (Right Side) -->
+    <div class="header-right">
+        <i class="icon add">+</i>
+        <i class="icon menu">&#9776;</i> <!-- hamburger menu -->
+        <i class="icon settings">&#9881;</i> <!-- settings gear -->
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown" id="dropdownMenu">
+         <a href="./home.html" rel="noopener">Dashboard</a>
+         <a href="./view.html" target="_blank" rel="noopener">View Transactions</a>
+         <a href="./reports.html" target="_blank" rel="noopener">Reports</a>
+        </div>
+      </div>
+  </header>
+
+    <main>
+      <section class="dashboard-cards">
+        <div class="card total-income" aria-labelledby="income-label">
+          <div class="card-title" id="income-label">Total income</div>
+          <div class="card-value">₹ 0.00</div>
+        </div>
+
+        <div class="card total-expense" aria-labelledby="expense-label">
+          <div class="card-title" id="expense-label">Total expense</div>
+          <div class="card-value">₹ 0.00</div>
+        </div>
+
+        <div class="card remaining-balance" aria-labelledby="balance-label">
+          <div class="card-title" id="balance-label">Remaining balance</div>
+          <div class="card-value">₹ 0.00</div>
+        </div>
+      </section>
+
+      <!-- Chart Panel -->
+      <section class="chart-panel" aria-label="Expense charts">
+        <div class="chart-controls" role="tablist" aria-label="Chart toggle">
+          <button id="btnMonthly" class="toggle-btn active" role="tab" aria-selected="true">Monthly Chart</button>
+          <button id="btnWeekly" class="toggle-btn" role="tab" aria-selected="false">Weekly Chart</button>
+        </div>
+
+        <div class="chart-container">
+          <canvas id="expenseChart" aria-label="Expense bar chart" role="img"></canvas>
+        </div>
+
+        <!-- Summary / Advice message (changes based on totals) -->
+        <div id="financeMessage" class="status-card neutral" role="status" aria-live="polite">
+          <div class="status-title">Summary</div>
+          <div class="status-text">Totals will appear here after chart loads.</div>
+        </div>
+      </section>
+    </main>
+ <footer></footer>   
+ <script src="../javascript/home.js"> </script>
+  </body>
+</html>

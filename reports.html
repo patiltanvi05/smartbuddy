@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports.com</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/report.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../javascript/theme.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <img class="site-logo" src="../img/logo .png" alt="Smart Budget Buddy Logo" >
+      </div>
+
+      <div class="header-right">
+        <i class="icon add">+</i>
+        <i class="icon menu">&#9776;</i>
+        <i class="icon settings">&#9881;</i>
+
+        <div class="dropdown" id="dropdownMenu">
+          <a href="./home.html" rel="noopener">Dashboard</a>
+          <a href="./view.html" target="_blank" rel="noopener">View Transactions</a>
+          <a href="./reports.html" target="_blank" rel="noopener">Reports</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="reports-wrap">
+      <div class="panel-head">
+        <div class="title">Reports</div>
+        <div class="toggle-group" role="tablist" aria-label="Summary toggle">
+          <button id="btnMonthly" class="toggle-btn active monthly" role="tab" aria-selected="true">Monthly summary</button>
+          <button id="btnWeekly" class="toggle-btn" role="tab" aria-selected="false">Weekly summary</button>
+        </div>
+      </div>
+
+      <section class="chart-card" aria-label="Spending by category">
+        <div class="chart-area">
+          <canvas id="reportsPie" aria-label="Spending pie chart" role="img"></canvas>
+        </div>
+
+        <aside class="legend-area">
+          <div style="font-weight:600;margin-bottom:8px;color: rgb(73, 63, 63);">Top 3 spending categories</div>
+          <ul id="legendList" class="legend-list" aria-hidden="false" style="color: rgb(46, 5, 5);"></ul>
+        </aside>
+      </section>
+
+      <div id="recommendation" class="recommendation" aria-live="polite">
+        <div>
+          <div class="rec-text" id="recText">Summary will appear here</div>
+          <div class="rec-detail" id="recDetail">Top category highlighted in the legend</div>
+        </div>
+        <div>
+          <!-- optional CTA -->
+          <button id="viewDetails" class="toggle-btn">View month details</button>`
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../javascript/reports.js">
+    </script>
+  </body>
+</html>

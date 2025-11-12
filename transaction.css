@@ -1,0 +1,93 @@
+/* Smooth, curved buttons + nicer form controls */
+
+/* Card */
+.transaction-form-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  border: 1px solid #eef2f7;
+}
+
+/* Inputs / selects / textarea */
+.transaction-form-card input,
+.transaction-form-card select,
+.transaction-form-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6eef7;
+  background: #ffffff;
+  box-shadow: inset 0 1px 2px rgba(16,24,40,0.03);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 120ms ease;
+  font-family: inherit;
+  color: #111827;
+}
+
+.transaction-form-card input:focus,
+.transaction-form-card select:focus,
+.transaction-form-card textarea:focus {
+  outline: none;
+  border-color: rgba(16,185,129,0.35);
+  box-shadow: 0 6px 18px rgba(16,185,129,0.07);
+  transform: translateY(-1px);
+}
+
+/* Pill-style action buttons */
+.toggle-btn {
+  padding: 9px 18px;
+  border-radius: 999px;                 /* fully rounded / curved */
+  border: 1px solid rgba(15,23,42,0.08);
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, opacity 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Cancel (left) button */
+#cancelBtn.toggle-btn {
+  background: #fff;
+  color: #374151;
+  border: 1px solid #e6e9ef;
+}
+
+/* Create (primary) button */
+#createBtn.toggle-btn {
+  background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 12px 30px rgba(16,185,129,0.14);
+}
+
+/* Hover / active / focus states */
+.toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(2,6,23,0.09);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(2,6,23,0.06);
+  opacity: 0.98;
+}
+
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(16,185,129,0.08);
+}
+
+/* Disabled state */
+.toggle-btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Small responsive tweak */
+@media (max-width: 520px) {
+  .transaction-form-card { padding: 16px; }
+  .toggle-btn { width: 48%; padding: 10px 12px; }
+}

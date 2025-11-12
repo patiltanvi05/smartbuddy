@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>View Transactions</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../css/theme.css">
+    <script src="../javascript/theme.js"></script>
+<link rel="stylesheet" href="../css/view.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="./home.html" aria-label="Go to Dashboard">
+          <img class="site-logo" src="../img/logo .png" alt="Smart Budget Buddy Logo">
+        </a>
+      </div>
+
+      <div class="header-right">
+        <i class="icon add" role="button" tabindex="0" aria-label="Add transaction">+</i>
+        <i class="icon menu" role="button" tabindex="0" aria-label="Open menu">&#9776;</i>
+        <i class="icon settings" role="button" tabindex="0" aria-label="Open settings">&#9881;</i>
+
+        <div class="dropdown" id="dropdownMenu">
+          <a href="./home.html" rel="noopener">Dashboard</a>
+          <a href="./view.html" target="_blank" rel="noopener">View Transactions</a>
+          <a href="./reports.html" target="_blank" rel="noopener">Reports</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="view-controls">
+        <div class="page-title">
+          <div>View Transactions</div>
+        </div>
+
+        <div class="control-group">
+          <div class="dropdown-panel">
+            <button id="sortBtn" class="toggle-btn">Sort</button>
+            <div id="sortPanel" class="panel-body" aria-hidden="true">
+              <label for="sortSelect">Order</label>
+              <select id="sortSelect">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+              </select>
+              <label>Date range (optional)</label>
+              <input id="startDate" type="date" placeholder="Start date">
+              <input id="endDate" type="date" placeholder="End date">
+              <div style="display:flex;gap:8px;justify-content:flex-end;">
+                <button id="applySort" class="toggle-btn">Apply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-panel">
+            <button id="filterBtn" class="toggle-btn">Filter</button>
+            <div id="filterPanel" class="panel-body" aria-hidden="true">
+              <label>Type</label>
+              <select id="typeFilter">
+                <option value="all">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+              </select>
+              <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px;">
+                <button id="applyFilter" class="toggle-btn">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap" id="tableWrap">
+        <table class="transactions" aria-label="Transactions table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="txBody">
+            <tr><td colspan="5" class="no-data">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../javascript/view.js"></script>
+  </body>
+</html>
